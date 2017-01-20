@@ -11,3 +11,4 @@ game/*.jpeg
 game/*.png
 game/*.mp3
 game/*.ogg
+/game/cache/
