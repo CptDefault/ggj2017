@@ -32,7 +32,7 @@ label space_scenery:
     
     "You've heard of these aliens; they're invasive parasites, and shouldn't be in this sector of space. Your ship wasn't equipped to deal with them."
     
-    "There's nothing you can do about that now, however. You can see the station fighting them off with its basic defence weaponry, but it struggles not to be overwhelmed. There's a good chance they won't have seen your approach."
+    "There's nothing you can do about that now, however. You can see the station fighting them off with its basic defence weaponry, but it struggles not to be overwhelmed. There's a good chance the station won't have seen your approach."
     
     "The bugs are fast and big in numbers, launching themselves at the station and your transport pod from somewhere beyond your vision. One bug is already clinging to your ship."
      

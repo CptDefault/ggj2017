@@ -1,4 +1,4 @@
-
+#Second Scientist Jeneva Cleary
 define jeneva_intro_complete = False
 
 label jeneva_intro:
@@ -87,7 +87,7 @@ label jeneva_intro_howdidigethere:
         "Do you always get distracted this easily?":
             j "Yes! Sorry. Right, your rescue."
     j "As soon as we saw your pod incoming, the captain throw on a spacesuit, grabbed her rifle and jumped out the airlock."
-    j "Completely insane, of course. But she managed to take out the bugs on your ship, and pulled it back in by attatching her tether to it."
+    j "Completely insane, of course. But she took out the bugs on your ship, attached her own tether to it and had us tow it back while she held on with her knees and blasted more bugs."
     j "In case you've forgotten, that's the tether that you should absolutely never disconnect from yourself whilst you're on a spacewalk. No exceptions."
     menu:
         "The captain did that for me?":
