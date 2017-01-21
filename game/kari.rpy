@@ -1,4 +1,6 @@
 
+define kari_intro_complete = False
+
 label kari_intro:
     scene bg engineering 
     
@@ -17,9 +19,9 @@ label kari_intro:
 
 label kari_intro_notsmooth:
     e "Too right! Those bugs are just making a mess of everything here"
-    jump kari_intro_wallBlowsUpe
+    jump kari_intro_wallBlowsUp
 label kari_intro_visitaunt:
-    "Oh, sure! I mean, this must all seem pretty tame to you, right?"
+    e "Oh, sure! I mean, this must all seem pretty tame to you, right?"
     $ kari_aunt_mentioned = True
     jump kari_intro_wallBlowsUp
     
@@ -49,7 +51,7 @@ label kari_menu_intro:
             jump kari_fun
         "What can you tell me about the rest of the crew?":
             jump kari_askaboutcrew
-        "That's all for now.":
+        "That's all for now." if kari_intro_complete:
             jump kari_bye
 
 label kari_name:
@@ -58,42 +60,63 @@ label kari_name:
     menu:
         "Sure. Forget I asked.":
             show kari smile
-            "Thanks. Anything else I can do for you?"
+            e "Thanks. Anything else I can do for you?"
             jump kari_menu_intro
         "Ah. Family issues?":
             if kari_aunt_mentioned:
-                "Yeah. My family make visiting your aunt look like cuddling a bunny."
-                "And it's got nothing to do with your case, so drop it. Okay?"
+                e "Yeah. My family make visiting your aunt look like cuddling a bunny."
+                e "And it's got nothing to do with your case, so drop it. Okay?"
             else:
-                "Yeah. And it's got nothing to do with your case, so drop it. Okay?"
+                e "Yeah. And it's got nothing to do with your case, so drop it. Okay?"
             jump kari_menu_intro
 
 label kari_radio:
+    show kari concerned
     e "Someone stuffed it with half a kilo of explosives and lit the fuse?"
     e "Now the hull's breached, so that whole part of the ship's sealed off."
     e "No easy way I can get in there unless I go outside and patch it up first."
     menu:
-        "Spacewalks are pretty routine, right":
-            "Sure, if the ship's not under attack by space bugs every couple of hours."
-        "I'm guessing there's a problem with that":
-             "You may have noticed the space bugs attacking things like small shuttles. And, I suspect, people on spacewalks."
-    "And besides, I've got enough work here keeping the whole station from blowing up."
+        "Spacewalks are pretty routine, right?":
+            e "Sure, if the ship's not under attack by space bugs every couple of hours."
+        "I'm guessing there's a problem with that.":
+             e "You may have noticed the space bugs attacking things like small shuttles. And, I suspect, people on spacewalks."
+    e "And besides, I've got enough work here keeping the whole station from blowing up."
     menu:
         "Any way of fixing the radio from here?":
-            "Nope. That section's sealed off, and even if I suited up, I can't get in there without venting half the rest of the ship."
-            "And the backup radio's in the same room. No hatch patch means no radio, period."
+            e "Nope. That section's sealed off, and even if I suited up, I can't get in there without venting half the rest of the ship. And we don't have that much spare air any more."
+            e "And the backup radio's in the same room. No hull patch means no radio, period."
         "The captain said something about a backup?":
-            "Right, the backup. It's in the same room as the radio, but again, can't get in there."
-        "Come to think of it, I was supposed to work on the backup right before the bugs attacked. Someone spilt coffee into it and fried one of the modules."
-        "And before you ask, no, I don't know who."
-        "I did make a list of what I needed to fix it, though. I'll grab the parts, just in case we figure out a way in there."
-                                                                                                   
+            e "Right, the backup. It's in the same room as the radio, but again, can't get in there."
+    e "Come to think of it, I was supposed to work on the backup right before the bugs attacked. Someone spilt coffee into it and fried one of the modules."
+    e "And before you ask, no, I don't know who."
+    e "I did make a list of what I needed to fix it, though. I'll grab the parts, just in case we figure out a way in there."
+    e "Before I do that though, anything else?"  
+    $ kari_intro_complete = True
+    jump kari_menu_intro                                                                                         
     
 label kari_fun:
-    
-    
+    show kari smiling
+    e "Do for fun?"
+    e "Well, I like browsing the aliens' version of the GalaxyNet. It's pretty primitive, but conspiracy theorists are the same everywhere."
+    menu:
+        "Consipracy theorists? Like those quadratic wormhole people?":
+            e "Sort of, but most of them are thinking all kinds of even dumber stuff. Even that their entire planet is flat."
+        "...You mean conspiracy theories about us, don't you?":
+            e "Look, don't tell anyone, but those are my favourite."
+    e "You should see what they think alien ships look like. It's quite inspiring."
+    e "I may have modelled some of our observation drones on them. Just for laughs, right?"
+    e "Not that I would actually fly them to the planet. You have no idea how many laws that would breach."
+    menu:
+        "Sure, I belive you.":
+            e "Good. There's so many laws. Why are politicians so not fun?"
+        "Why don't I believe you?":
+            e "No, there's heaps of laws about it. {w=2.0}Especially if they notice. {p=2.0}Not that they would. {w=2.0}Because I'm not doing it."
+    e "Anything else I can do for you?"
+    jump kari_menu_intro
 label kari_askaboutcrew:
-    
+    e "Not much! We haven't written their profiles yet!"
+    e "Anything else I can do for you?"
+    jump kari_menu_intro
     
 label kari_bye:
-    "Okay! Catch you round!"
+    e "Okay! Catch you round!"
