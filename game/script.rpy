@@ -15,7 +15,7 @@ label debug:
         "Jeneva Start":
             jump jeneva_intro
         "Main Game Start":
-            jump game_start
+            jump opening
 
 label game_start:
     # Show a background. This uses a placeholder by default, but you can
