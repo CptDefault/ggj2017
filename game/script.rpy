@@ -5,8 +5,10 @@
 
 # The game starts here.
 
-label start:
 
+label start:
+    play music "music/Mysterious Space Game v2.wav"
+    
 label debug:
     menu:
         "Testing Menu"
