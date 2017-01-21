@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("GGJ17")
+define config.name = _("Sabotage! A Science Mission")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -36,7 +36,7 @@ define gui.about = _("")
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "GGJ17"
+define build.name = "GGJ17_sabotage"
 
 
 ## Sounds and music ############################################################
