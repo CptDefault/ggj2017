@@ -1,5 +1,6 @@
 
 define kari_intro_complete = False
+define kari_aunt_mentioned = False
 
 label kari_intro:
     scene bg engineering 

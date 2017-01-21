@@ -7,10 +7,13 @@
 
 label start:
 
+label debug:
     menu:
         "Testing Menu"
         "Kari Start":
             jump kari_intro
+        "Jeneva Start":
+            jump jeneva_intro
         "Main Game Start":
             jump game_start
 
@@ -34,8 +37,6 @@ label game_start:
     show c sad
     
     e "You've created a new Ren'Py game."
-    
-    jump ScriptTwoEntry
 
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
