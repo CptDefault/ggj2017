@@ -2,7 +2,7 @@ label opening:
     
     #background probs gonna be some external view of the ship observing the planet
     
-    scene opening
+    scene bg_opening_pod
     
     "You wake up to the persistent sound of the ship's alarm as you near your destination, your body still lethargic from the aftereffects of cryosleep."
     
@@ -24,6 +24,8 @@ label first_action_menu:
             jump space_scenery
 
 label space_scenery:
+    scene bg_opening_stars
+    
     "The transport doesn't have ranged scanners, since interstellar trips rarely encounter anything. So, at a wave of your fingers, the viewport is activated, revealing your surroundings."
     
     "The first thing you see is the planet, followed by the research station as it hovers at the furthest possible gravitational orbit. Then you see the wave of bugs swarming across space."
