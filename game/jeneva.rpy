@@ -1,4 +1,5 @@
 
+define jeneva_intro_complete = False
 
 label jeneva_intro:
     scene bg science 
@@ -28,22 +29,30 @@ label jeneva_intro:
             j "...A vet would technically be more qualified. I'm a xenobiologist, so I'm trained to work with non-terrestrial biology. Though when you get down to it, it's all just biology."
     j "At any rate, I'm the closest this ship has to a doctor. And in my eyes, you should be ship shape! More or less."
     j "Try to take it easy on the heavy lifting for a few days."
-    j "At any rate, I believe the captain wanted to speak to you. But I can answer some of your questions first, if you'd like?"
+    j "I believe the captain wanted to speak to you. But I can answer some of your questions first, if you'd like?"
     
     
 label jeneva_menu_intro:
     menu:
         "How did I get here?":
             jump jeneva_intro_howdidigethere
+        "What can you tell me about this station?":
+            jump jeneva_station
+        "What do you do for fun around here?":
+            jump jeneva_fun
+        "What can you tell me about the rest of the crew?":
+            jump jeneva_askaboutcrew
+        "That's all for now" if jeneva_intro_complete:
+            return
 
 label jeneva_intro_howdidigethere:
     j "Your pod was attacked by Locus Locusts. And yes, that's their technical terms."
     j "The person who discovered them had a rather bad grasp of Latin. Auto-translators are always 5 years off perfection, if you believe the experts."
-    j "Have you ever studied latin."
+    j "Have you ever studied latin?"
     menu:
         "No. I'm a logistics officer. Not a lot of room for latin.":
             j "Oh, of course. I'm sorry, I tend to ramble a lot."
-        "Do you always get distracted this easily.":
+        "Do you always get distracted this easily?":
             j "Yes! Sorry. Right, your rescue."
     j "As soon as we saw your pod incoming, the captain throw on a spacesuit, grabbed her rifle and jumped out the airlock."
     j "Completely insane, of course. But she managed to take out the bugs on your ship, and pulled it back in by attatching her tether to it."
@@ -63,6 +72,51 @@ label jeneva_intro_howdidigethere:
         "Well, I'll take being alive over what I brought with me.":
             j "That's the spirit."
     
+    $ jeneva_intro_complete = True
     
+    j "Did you have any other questions?"
+    jump jeneva_menu_intro
+
+label jeneva_station:
+    j "Probably not much more than you saw in your orientation video."
+    j "We're stationed here to observe the civilisation on the planet below."
+    j "Technologically, they're at a similar stage to humanity around year 2000."
+    menu:
+        "What was humanity even like that long ago?":
+            j "Quite primitive. Still stuck on one planet, degrading that planet, and at war with each other."
+        "Technologically? You're implying they're different in some other way?":
+            j "Well, phyically they're quite different. Six limbed and seemingly telepathic, for a start."
+            j "What I would give to see one up close..."
+    j "We report our findings back to the United First-contact Orginisation every six months."
+    j "If we needed to intervene for some sort of humanitarian, or any any other reason, they'd make the call."
+    j "Did you have any other questions?"
+    jump jeneva_menu_intro
+
+label jeneva_fun:
+    j "Fun?"
+    j "Well, I guess I study the planet below us?"
+    j "That's probably not what you meant, but we really are doing important work here."
+    j "There's so many people out there willing to look at places like this as a threat, which I just don't think of them as."
+    j "They are, however, incredibly interesting."
+    menu:
+        "Have you ever been accused of being work obsessed?":
+            j "Oh, all the time. But I really am fascinated with it."
+        "Anything less work related?":
+            j "To be honest, I hadn't really considered it. I guess you could look out the windows? There's some nice views."
+    j "I hope the captain lets us take one of the aliens to study one day. I'm fairly sure I know what sedatives to use so that they don't remember the trip. It would be fascinating, don't you think?"
+    menu:
+        "Sure! I'd love to see one up close.":
+            j "I'm glad you think so! I'll have to let the captain know once this is all resolved."
+        "Is that even remotely legal?":
+            j "Technically? No. It would technically be illegal."
+            j "That said, I've been reading the laws around it a little, and I think there's some loopholes. We just need to make sure we don't influence their society at all."
     
+    j "Did you have any other questions?"
+    jump jeneva_menu_intro
+    
+label jeneva_askaboutcrew:
+    j "Not much! We haven't written their profiles yet!"
+    
+    j "Did you have any other questions?"
+    jump jeneva_menu_intro
     
