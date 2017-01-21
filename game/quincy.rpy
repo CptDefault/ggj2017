@@ -8,11 +8,11 @@ label quincy_intro:
     scene bg science
     show quincy
     
-    s "What? Can't you see I'm busy"
+    s "What? Can't you see I'm busy?"
     menu:
-        "The captain asked me to talk to you about some missing supplies":
+        "The captain asked me to talk to you about some missing supplies.":
             s "Wonderful. Did you miss the part where I'm busy?"
-        "What are you working on":
+        "What are you working on?":
             s "Busy things that would go over your head."
     s "Below us, we're witnessing the fall of an alien civilisation to a pathetically small swarm of Locus Locusts."
     s "I need to document this. As that's my job."
@@ -26,6 +26,13 @@ label quincy_intro:
     s "What do you actually want?"
     jump quincy_menu_intro
     
+label quincy_revisit_intro:
+    scene bg science
+    show quincy
+    
+    s "What is it now? I'm still busy."
+    
+    jump quincy_menu_intro
     
 label quincy_menu_intro:
     menu:
@@ -37,7 +44,7 @@ label quincy_menu_intro:
             jump quincy_fun
         "What can you tell me about the rest of the crew?":
             jump quincy_askaboutcrew
-        "That's all for now" if quincy_intro_complete_planet && quincy_intro_complete_supplies:
+        "That's all for now" if quincy_intro_complete_planet and quincy_intro_complete_supplies:
             $ quincy_intro_complete = True
             s "Then leave."
             return

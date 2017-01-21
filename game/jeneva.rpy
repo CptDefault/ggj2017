@@ -16,14 +16,15 @@ label jeneva_intro:
     
     "Cleary" "... {w=1.0}Are you awake... {w=0.4}now?!"
     
-    scene bg science 
+    scene bg science
     show jeneva
-    
-    "Yeah. I...{w=0.5} made it onto the station. {w=0.5}Huh."
+    with Dissolve(1)
+     
+    m "Yeah. I...{w=0.5} made it onto the station. {w=0.5}Huh."
     
     j "Yup! Welcome aboard. Glad to have you here. I'm Jeneva Cleary."
     
-    "Glad to be here, {w=0.3}I think."
+    m "Glad to be here, {w=0.3}I think."
     
     j "So, how are you feeling?"
     menu:
@@ -51,7 +52,16 @@ label jeneva_intro:
     j "At any rate, I'm the closest this ship has to a doctor. And in my eyes, you should be ship shape! More or less."
     j "Try to take it easy on the heavy lifting for a few days."
     j "I believe the Captain wanted to speak to you. But I can answer some of your questions first, if you'd like?"
+    call jeneva_menu_intro
+    jump chap1_postwakeup
     
+label jeneva_revisit_intro:
+    scene bg science
+    show jeneva
+    
+    j "Hi there. Are you feeling okay?"
+    
+    jump jeneva_menu_intro
     
 label jeneva_menu_intro:
     menu:
@@ -64,10 +74,11 @@ label jeneva_menu_intro:
         "What can you tell me about the rest of the crew?":
             jump jeneva_askaboutcrew
         "That's all for now" if jeneva_intro_complete:
+            j "Okay! Look after yourself."
             return
 
 label jeneva_intro_howdidigethere:
-    j "Your pod was attacked by Locus Locusts. And yes, that's their technical terms."
+    j "Your pod was attacked by Locus Locusts. And yes, that's their technical term."
     j "The person who discovered them had a rather bad grasp of Latin. Auto-translators are always 5 years off perfection, if you believe the experts."
     j "Have you ever studied latin?"
     menu:

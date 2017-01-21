@@ -26,10 +26,16 @@ label myron_intro:
         "You realise I graduated a civilian course about filing shipping manifests?":
             c "Don't be modest, soldier! I've seen your track record. Three weeks at Norpoint Military Academy would have taught you more than those lousy scientists have learnt in their entire lives!"
     
-    
     c "Any questions, soldier?"
     jump myron_menu_intro
     
+label myron_revisit_intro:
+    scene bg bridge
+    show myron
+    
+    c "Soldier! Report!"
+    
+    jump myron_menu_intro
     
 label myron_menu_intro:
     menu:
@@ -50,6 +56,8 @@ label myron_intro_howdidigethere:
     c "It's always good to go flying and shoot things."
     c "And when you're a fighter pilot at heart who's been stuck on a ship without engines for almost a year, well..."
     c "Every jetpack starts looking a little bit like a fighter."
+    
+    $ myron_intro_complete = True
     
     c "Any other questions, soldier?"
     jump myron_menu_intro

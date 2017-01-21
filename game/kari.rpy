@@ -14,19 +14,10 @@ label kari_intro:
     e "Are you feeling better? Seems you got quite the welcoming party."
     menu:
         "It wasn't the smoothest arrival I've had":
-            jump kari_intro_notsmooth
+            e "Too right! Those bugs are just making a mess of everything here"
         "That was nothing. You should see what visiting my aunt is like!":
-            jump kari_intro_visitaunt
-
-label kari_intro_notsmooth:
-    e "Too right! Those bugs are just making a mess of everything here"
-    jump kari_intro_wallBlowsUp
-label kari_intro_visitaunt:
-    e "Oh, sure! I mean, this must all seem pretty tame to you, right?"
-    $ kari_aunt_mentioned = True
-    jump kari_intro_wallBlowsUp
-    
-label kari_intro_wallBlowsUp:
+            e "Oh, sure! I mean, this must all seem pretty tame to you, right?"
+            $ kari_aunt_mentioned = True
     "Sparks burst from the wall."
     show kari working
     e "Oh, blast. Hey, pass me the combombulator?"
@@ -42,6 +33,14 @@ label kari_intro_wallBlowsUp:
     e "What can I do for you?"
     jump kari_menu_intro
 
+label kari_revisit_intro:
+    scene bg engineering
+    show kari smiling
+    
+    e "Hi there! Can I do something for you?"
+    
+    jump kari_menu_intro
+    
 label kari_menu_intro:
     menu:
         "What was your name, again? I never caught more than \"Kari\"?":
@@ -73,7 +72,8 @@ label kari_name:
 
 label kari_radio:
     show kari concerned
-    e "Someone stuffed it with half a kilo of explosives and lit the fuse?"
+    e "I'm not sure. It's gone offline at the same time the hull got breached around there."
+    e "Best guess, one of the bugs hit that part of the ship extra hard."
     e "Now the hull's breached, so that whole part of the ship's sealed off."
     e "No easy way I can get in there unless I go outside and patch it up first."
     menu:
