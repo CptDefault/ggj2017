@@ -26,9 +26,9 @@ label first_action_menu:
 label space_scenery:
     "The transport doesn't have ranged scanners, since interstellar trips rarely encounter anything. So, at a wave of your fingers, the viewport is activated, revealing your surroundings."
     
-    "The first thing you see is the alien planet, followed by the research station as it hovers at the furthest possible gravitational orbit. Then you see the wave of bugs swarming across space."
+    "The first thing you see is the planet, followed by the research station as it hovers at the furthest possible gravitational orbit. Then you see the wave of bugs swarming across space."
     
-    "You know these aliens; they're invasive parasites, and shouldn't be in this sector of space. Your ship wasn't equipped to deal with them."
+    "You've heard of these aliens; they're invasive parasites, and shouldn't be in this sector of space. Your ship wasn't equipped to deal with them."
     
     "There's nothing you can do about that now, however. You can see the station fighting them off with its basic defence weaponry, but it struggles not to be overwhelmed. There's a good chance they won't have seen your approach."
     
@@ -41,9 +41,30 @@ label space_scenery:
     "The station swings out of your view, and you find yourself face-to-face with the planet. If the bugs don't tear you open first, the landing will kill you. The pods alarms continue to blare at you helpfully."
     
     menu:
-        "Do something!":
-            "You close the viewport, and hear another loud thump as the pod is shaken by another impact. The suspension on your cryosleep bed snaps, throwing you out of the bed."        
+        "Panic!":
+            "The ship senses your adrenalin spiking, and you feel a pinprick as the cryopod injects you with a depressant in an attempt to help."
             
-            "You feel pain as your head hits the dense metal wall of the pod. {w=1.0}Then you feel nothing."
+            "Before you can get the benefits of that, there's another loud thump as the pod is shaken by an impact. The suspension on your cryosleep bed snaps, throwing you out of the bed."
             
-            jump jeneva_intro
+            jump headtrauma
+            
+        "Close the viewport":
+            
+            "You close the viewport, then hear a loud thump as the pod is shaken by another impact. The suspension on your cryosleep bed snaps, throwing you out of the bed."
+            
+            jump headtrauma
+            
+        "Readjust your trajectory":
+            "Your fingers fly across the controls, activating the thrusters."
+            
+            "You're not changing course fast enough. A readout alerts you to one of the thrusters being blocked by something large, probably one of the alien bugs."
+            
+            "After a few seconds the thruster begins to overheat."
+            
+            "It eases up suddenly, finally blockage-free, but before you can move far you hear a loud thump as the pod is shaken by another impact. The suspension on your cryosleep bed snaps, throwing you out of the bed."
+            jump headtrauma
+            
+label headtrauma:
+    "You feel pain as your head hits the dense metal wall of the pod. {w=1.0}Then you feel nothing."
+    
+    jump jeneva_intro
