@@ -12,7 +12,7 @@ label myron_intro:
     menu:
         "That's what they train us for, right?":
             c "Absolutely, soldier! Best training in the galaxy."
-        "I think it was a fluke"
+        "I think it was a fluke":
             c "We make our own luck, soldier!"
     
     c "It's good that we have you. We seem to have ourselves a bit of a situation here."
@@ -25,6 +25,7 @@ label myron_intro:
             pass
         "You realise I graduated a civilian course about filing shipping manifests?":
             c "Don't be modest, soldier! I've seen your track record. Three weeks at Norpoint Military Academy would have taught you more than those lousy scientists have learnt in their entire lives!"
+    
     
     c "Any questions, soldier?"
     jump myron_menu_intro
@@ -39,6 +40,8 @@ label myron_menu_intro:
         "What can you tell me about the rest of the crew?":
             jump myron_askaboutcrew
         "That's all for now" if myron_intro_complete:
+            c "Then hop to it! Those scientists aren't about to solve any problems themselves!"
+            c "And check in on our engineer, too. She's also the sort to lose track of things."
             c "Dismissed, soldier!"
             return
             
