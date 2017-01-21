@@ -59,7 +59,7 @@ label space_scenery:
         "Readjust your trajectory":
             "Your fingers fly across the controls, activating the thrusters."
             
-            "You're not changing course fast enough. A readout alerts you to one of the thrusters being blocked by something large, probably one of the alien bugs."
+            "You're not changing course fast enough. A readout alerts you to one of the thrusters being blocked by something large, probably an alien bug."
             
             "After a few seconds the thruster begins to overheat."
             

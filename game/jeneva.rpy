@@ -2,15 +2,36 @@
 define jeneva_intro_complete = False
 
 label jeneva_intro:
+    scene black with Fade(1.0, 0.5, 1.0)
+    
+    "..."
+    
+    "Unknown" "Patient should be waking soon, Captain. You'll get a full report later."
+    
+    "Captain" "Good work, Cleary. If you need me I'll be on the Bridge."
+    
+    "Cleary" "Yes, Captain."
+    
+    "..."
+    
+    "Cleary" "... {w=1.0}Are you awake... {w=0.4}now?!"
+    
     scene bg science 
     show jeneva
+    
+    "Yeah. I...{w=0.5} made it onto the station. {w=0.5}Huh."
+    
+    j "Yup! Welcome aboard. Glad to have you here. I'm Jeneva Cleary."
+    
+    "Glad to be here, {w=0.3}I think."
+    
     j "So, how are you feeling?"
     menu:
         "Like I lost a fight with a Ungardian Tiger":
             j "Oh, have you met one before? I've always wanted to visit."
             j "We don't get much time off doing these jobs though, do we?"
         "Like someone's injected me with a lot of painkillers, but not quite enough":
-            j "I'm sorry. I have stronger painkillers, but the capain has said she wants to be able to talk to you."
+            j "I'm sorry. I have stronger painkillers, but the Captain has said she wants to be able to talk to you."
         "Fine.":
             j "Well, at least we know you're a terrible liar."
     j "Do you think you're up to walking?"
@@ -29,7 +50,7 @@ label jeneva_intro:
             j "...A vet would technically be more qualified. I'm a xenobiologist, so I'm trained to work with non-terrestrial biology. Though when you get down to it, it's all just biology."
     j "At any rate, I'm the closest this ship has to a doctor. And in my eyes, you should be ship shape! More or less."
     j "Try to take it easy on the heavy lifting for a few days."
-    j "I believe the captain wanted to speak to you. But I can answer some of your questions first, if you'd like?"
+    j "I believe the Captain wanted to speak to you. But I can answer some of your questions first, if you'd like?"
     
     
 label jeneva_menu_intro:
