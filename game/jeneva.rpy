@@ -36,7 +36,7 @@ label jeneva_menu_intro:
         "How did I get here?":
             jump jeneva_intro_howdidigethere
 
-label jeneva_intro_howdidigethere
+label jeneva_intro_howdidigethere:
     j "Your pod was attacked by Locus Locusts. And yes, that's their technical terms."
     j "The person who discovered them had a rather bad grasp of Latin. Auto-translators are always 5 years off perfection, if you believe the experts."
     j "Have you ever studied latin."
@@ -60,7 +60,7 @@ label jeneva_intro_howdidigethere
     menu:
         "All of my stuff is gone? I had an original Playstation 8 in there!":
             j "Sorry. You wouldn't believe how many alarms Kari had to disable just so that we could get you out."
-        "Well, I'll take being alive over what I brought with me."
+        "Well, I'll take being alive over what I brought with me.":
             j "That's the spirit."
     
     
