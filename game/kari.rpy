@@ -114,10 +114,6 @@ label kari_fun:
             e "No, there's heaps of laws about it. {w=2.0}Especially if they notice. {p=2.0}Not that they would. {w=2.0}Because I'm not doing it."
     e "Anything else I can do for you?"
     jump kari_menu_intro
-label kari_askaboutcrew:
-    e "Not much! We haven't written their profiles yet!"
-    e "Anything else I can do for you?"
-    jump kari_menu_intro
     
 label kari_askaboutcrew:
     e "Absolutely! Fire away."

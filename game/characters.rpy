@@ -2,7 +2,7 @@
 # name of the character.
 
 define c = Character("Captain Myron Padilla")
-image myron = "Padilla_sketch.png"
+image myron = "padilla.png"
 # Doubles as the pilot. Ex military, misses having a bigger crew and more active role.
 # Dislikes how quiet this mission is and hopes to be recalled and reassigned.
 
@@ -15,7 +15,7 @@ image jeneva = "jeneva.png"
 
 
 define e = Character("Engineer Kari")
-image kari = "kari_sketch.png"
+image kari = "kari.png"
 
 
 define m = Character("Me")
