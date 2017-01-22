@@ -71,7 +71,7 @@ label jeneva_menu_intro:
             jump jeneva_station
         "What do you do for fun around here?":
             jump jeneva_fun
-        "What can you tell me about the rest of the crew?":
+        "Can I ask you some questions about the rest of the crew?":
             jump jeneva_askaboutcrew
         "That's all for now" if jeneva_intro_complete:
             j "Okay! Look after yourself."
@@ -147,8 +147,23 @@ label jeneva_fun:
     jump jeneva_menu_intro
     
 label jeneva_askaboutcrew:
-    j "Not much! We haven't written their profiles yet!"
-    
-    j "Did you have any other questions?"
-    jump jeneva_menu_intro
+    j "Oh, sure! We can do that."
+label jeneva_askaboutcrew_loop:
+    menu:
+        "The Captain":
+            j "Captain Padilla?"
+            j "I like her, mostly. She can be a bit intense."
+            j "She's nice to me. I think I can talk her into letting me study one of the aliens up close eventually."
+        "The First Scientist":
+            j "I don't like Quincy. She's so cold and heartless."
+            j "She's not sad to see the planet under attacks by the bugs at all. So long as she can document it..."
+        "The Engineer":
+            j "I like Kari. She's sweet."
+            j "It is a little worrying how she forgets what things are supposed to be called, but she can figure out how to fix just about anything."
+            j "Even if most of her repairs would probably get her fired from any job where she was a little more supervised."
+        "That's it about the crew":
+            j "Do you have any other questions?"
+            jump jeneva_menu_intro
+    j "Anyone else you want to know about?"
+    jump jeneva_askaboutcrew_loop
     

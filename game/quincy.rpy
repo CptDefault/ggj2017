@@ -92,8 +92,23 @@ label quincy_fun:
     jump quincy_menu_intro
     
 label quincy_askaboutcrew:
-    s "Not much! We haven't written their profiles yet!"
-    
-    s "Do you have anything to ask that isn't a waste of both of our time?"
-    jump quincy_menu_intro
+    s "If I tell you about someone, will you go away?"
+label quincy_askaboutcrewloop:
+    menu:
+        "The Captain":
+            s "Captain Padilla? She's unhinged and dangerous. The only reason I can think of a wannabe fighter pilot being somewhere like this is because she pissed someone important off."
+            s "And somehow, I don't find that a difficult situation to imagine."
+        "Second Scientist Cleary":
+            s "Cleary? There's something... wrong about her."
+            s "She's dedicated, sure, but she's dangerously obessed with her specimens."
+            s "I half expect to wake up one day to hear she's taken a ship down to abduct one of the savages."
+        "Engineer Kari":
+            s "To be honest, I have no idea how this station is still functioning."
+            s "I don't think she understands any of it either."
+            s "Her lack of understanding of the proper terms for the work she's doing is unsettling, to stay the least."
+            s "She has kept us attack through these bug attacks for now, though."
+        "That's it about the crew":
+            s "Do you have anything to ask that isn't a waste of both of our time?"
+            jump quincy_menu_intro
+    jump quincy_askaboutcrewloop
     

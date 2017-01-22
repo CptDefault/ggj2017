@@ -119,5 +119,24 @@ label kari_askaboutcrew:
     e "Anything else I can do for you?"
     jump kari_menu_intro
     
+label kari_askaboutcrew:
+    e "Absolutely! Fire away."
+label kari_askaboutcrew_loop:
+    menu:
+        "The Captain":
+            e "Captain Padilla? Absolutely insane."
+            e "Rich coming from me, right?"
+        "First Scientist Quincy":
+            e "Quincy is a bag full of not fun. She's completely obsessed with her work."
+            e "Sometimes I feel like she hates aliens, too. She definitely hates these ones."
+        "Second Scientist Jeneva":
+            e "Jeneva's alright. Knows her way around a ship better than most, and a lot more cunning than you might think at first."
+            e "She is a bit too focused on her work, but at least she actually likes the aliens."
+        "That's it about the crew":
+            e "Do you have any other questions?"
+            jump kari_menu_intro
+    e "Anyone else you want to know about?"
+    jump kari_askaboutcrew_loop
+    
 label kari_bye:
     e "Okay! Catch you round!"

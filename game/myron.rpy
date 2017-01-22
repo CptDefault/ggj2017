@@ -24,7 +24,7 @@ label myron_intro:
         "Yes, ma'am!":
             pass
         "You realise I graduated a civilian course about filing shipping manifests?":
-            c "Don't be modest, soldier! I've seen your track record. Three weeks at Norpoint Military Academy would have taught you more than those lousy scientists have learnt in their entire lives!"
+            c "Don't sell yourself short, soldier! I've seen your track record. Three weeks at Norpoint Military Academy would have taught you more than those lousy scientists have learnt in their entire lives!"
     
     c "Any questions, soldier?"
     jump myron_menu_intro
@@ -43,7 +43,7 @@ label myron_menu_intro:
             jump myron_intro_howdidigethere
         "What do you do for fun around here?":
             jump myron_fun
-        "What can you tell me about the rest of the crew?":
+        "Can I ask some questions about the rest of the crew?":
             jump myron_askaboutcrew
         "That's all for now" if myron_intro_complete:
             c "Then hop to it! Those scientists aren't about to solve any problems themselves!"
@@ -71,8 +71,30 @@ label myron_fun:
     jump myron_menu_intro
     
 label myron_askaboutcrew:
-    c "Not much! We haven't written their profiles yet!"
-    
-    c "Any other questions, soldier?"
-    jump myron_menu_intro
+    c "Absolutely, soldier!"
+label myron_askaboutcrew_loop:
+    menu:
+        "First Scientist Quincy":
+            c "Civillian Specialist Quincy doesn't know the first thing about proper military procedures!"
+            c "Whilst I'm sure the work she's doing is important to someone in a stuffy office, it's hardly exciting, is it?"
+        "Second Scientist Jeneva":
+            c "Cleary? I think of her as a bit of a duckling."
+            c "No teeth, and not a clue about proper military procedures, but she's a sweet girl."
+        "Engineer Kari":
+            c "She keeps a functional ship, though I'll admit I can't keep up with all the technical terms she's using."
+            c "That's why I'm the captain and she's the engineer, I guess!"
+            c "Of course, I still don't understand why a girl from such a well off family is hiding out here."
+            menu:
+                "Makes sense. Can I ask about someone else?":
+                    jump myron_askaboutcrew
+                "Well off family, you say?":
+                    c "Well."
+                    c "Forget I said anything, soldier!"
+                    c "Not sure the girl would forgive me if I let that one slip."
+                    c "And I absolutely cannot afford another court martial!"
+        "That's it about the crew":
+            c "Any other questions, soldier?"
+            jump myron_menu_intro
+    c "Any other question about your fellow crew, soldier?"
+    jump myron_askaboutcrew_loop
     

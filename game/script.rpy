@@ -8,6 +8,7 @@
 
 label start:
     play music "music/Mysterious Space Game v2.wav"
+    jump opening
     
 label debug:
     menu:

@@ -1,8 +1,12 @@
 label opening:
+    scene bg_opening_stars
+    scene bg_ggj with Fade(1.0, 0.5, 1.0)
+    
+    pause
     
     #background probs gonna be some external view of the ship observing the planet
     
-    scene bg_opening_pod
+    scene bg_opening_pod with Fade(1.0, 0.5, 1.0)
     
     "You wake up to the persistent sound of the ship's alarm as you near your destination, your body still lethargic from the aftereffects of cryosleep."
     
