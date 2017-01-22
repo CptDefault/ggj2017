@@ -47,7 +47,7 @@ label myron_menu_intro:
             jump myron_askaboutcrew
         "That's all for now" if myron_intro_complete:
             c "Then hop to it! Those scientists aren't about to solve any problems themselves!"
-            c "And check in on our engineer, too. She's also the sort to lose track of things."
+            c "And check in on our engineer, too. She's usually good with the parts, but I'm still waiting on her to fix the radio."
             c "Dismissed, soldier!"
             return
             

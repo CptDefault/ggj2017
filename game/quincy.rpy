@@ -76,10 +76,13 @@ label quincy_intro_missingsupplies:
     menu:
         "The captain wants you to look over the list, at least":
             s "Fine."
+            "She scans the list quickly."
+            s "How odd. There's enough here to make a small bomb. Someone could make almost half a kilo of explosives with this."
         "The captain seemed to think there was enough on this missing parts list to make an explosive.":
             s "She's paranoid. And hoping for a fight at every opportunity. Never the less, do you have the list on you?"
-    "She scans the list quickly."
-    s "This certainly is enough to make a small bomb. Half a kilo of explosives. Enough to take out some ship subsystems and rupture the hull."
+            "She scans the list quickly."
+            s "This certainly is enough to make a small bomb. Someone could make almost half a kilo of explosives with this."
+    e "Enough to take out some ship subsystems and rupture the hull."
     s "Still, I can't imagine anyone on the ship actually building a bomb. No one's that vicious."
     $ quincy_intro_complete_supplies = True
     s "Are we done?"

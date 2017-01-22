@@ -2,7 +2,7 @@ label opening:
     scene bg_opening_stars
     scene bg_ggj with Fade(1.0, 0.5, 1.0)
     
-    pause
+    pause 2.5
     
     #background probs gonna be some external view of the ship observing the planet
     

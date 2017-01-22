@@ -43,10 +43,12 @@ label chap1_somethingdramatic:
     show kari concerned at right
     e "Oi! Captain!"
     
-    show myron at center
+    show myron at Position(xpos = 0.65, xanchor=0.5, ypos=1.0, yanchor=1.0)
     c "Engineer! Report!"
     e "I got a drone bot into the radio room. You're not going to like this."
-    show quincy at left
+    show quincy at Position(xpos = 0.35, xanchor=0.5, ypos=1.0, yanchor=1.0)
+    show jeneva at left
+    with dissolve
     s "Kari, I've spoken to you about inside voices before."
     e "The radio. It wasn't taken out by the bugs."
     e "It was taken out from inside. By..."

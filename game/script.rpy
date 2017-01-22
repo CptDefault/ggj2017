@@ -8,7 +8,7 @@
 
 label start:
     play music "music/Mysterious Space Game v2.wav"
-    jump opening
+    #jump opening
     
 label debug:
     menu:
@@ -17,6 +17,8 @@ label debug:
             jump kari_intro
         "Jeneva Start":
             jump jeneva_intro
+        "End":
+            jump chap1_somethingdramatic
         "Main Game Start":
             jump opening
 
